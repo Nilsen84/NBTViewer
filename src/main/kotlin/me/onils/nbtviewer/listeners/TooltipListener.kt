@@ -15,13 +15,13 @@ private val COLORS = arrayOf("§9", "§2", "§e", "§c")
 class TooltipListener {
     @SubscribeEvent
     fun onTooltip(event: ItemTooltipEvent){
-        event.toolTip.addAll(
+        event.toolTip.add(
              WordUtils.wrap(
                  "${GRAY}NBT: " + format(event.itemStack.tagCompound),
                 96,
                 "\n",
                 false
-            ).split('\n')
+            )
         )
     }
 
