@@ -56,6 +56,8 @@ class TooltipListener {
                     "$bracketColor[",
                     "$bracketColor]"
                 ) { "$GRAY$it" }
+            is NBTTagString ->
+                "$GRAY\"${nbt.string.replace("\"", "\\\"")}$GRAY\""
             else -> "$GRAY$nbt"
         }
     }
